@@ -1,15 +1,12 @@
-
+import java.io.File
 
 fun main(args: Array<String>) {
     println("Kotlin program! \n")
 
-    val delimit = ","
+    // read from file
+    val lines = File("dep-pl.txt").readLines()
 
-    // read file
-    val lines = listOf("Kotlin, Java, C#, JavaScript, Scala, Groovy",
-        "Groovy, Java",
-        "JavaScript, Hypertalk ",
-        "Java, C++, Smalltalk-80")
+    val delimit = ","
 
     // process each line
     for (line in lines) {
@@ -23,4 +20,7 @@ fun main(args: Array<String>) {
             println(i)
         }
     }
+    // write file
+    //File("fileName").writeText("fileContent")
+
 }
